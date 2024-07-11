@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "161934143519",
+    "project_id": "smartsociety-db62f",
+    "storage_bucket": "smartsociety-db62f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161934143519:android:fa88e7d768d8410826e52a",
+        "android_client_info": {
+          "package_name": "com.example.t_store"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRFGEr4cZIu_ZmCmVMPVCrBvpf1dcYSNE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
