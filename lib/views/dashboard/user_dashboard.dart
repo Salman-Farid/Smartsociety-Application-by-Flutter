@@ -5,7 +5,7 @@ import '../../controllers/auth_controller.dart';
 class UserDashboard extends StatelessWidget {
   final AuthController authController = Get.find();
 
-  const UserDashboard({super.key});
+   UserDashboard({super.key});
 
   @override
   Widget build(BuildContext context) {

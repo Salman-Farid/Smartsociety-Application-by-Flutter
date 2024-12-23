@@ -21,7 +21,7 @@ class CommitteeDirectory extends StatelessWidget {
     // Add more committee members as needed
   ];
 
-  const CommitteeDirectory({super.key});
+   CommitteeDirectory({super.key});
 
   @override
   Widget build(BuildContext context) {
