@@ -23,6 +23,16 @@ class LoginScreen extends StatelessWidget {
                 controller: emailController,
                 hint: 'Email',
                 prefixIcon: Icons.email,
+                keyboardType: TextInputType.emailAddress,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter your email';
+                  }
+                  if (!GetUtils.isEmail(value)) {
+                    return 'Please enter a valid email';
+                  }
+                  return null;
+                },
               ),
               SizedBox(height: 16),
               CustomTextField(
@@ -30,6 +40,15 @@ class LoginScreen extends StatelessWidget {
                 hint: 'Password',
                 prefixIcon: Icons.lock,
                 isPassword: true,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter your password';
+                  }
+                  if (value.length < 6) {
+                    return 'Password must be at least 6 characters';
+                  }
+                  return null;
+                },
               ),
               SizedBox(height: 24),
               CustomButton(
