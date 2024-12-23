@@ -2,7 +2,7 @@
   "project_info": {
     "project_number": "161934143519",
     "project_id": "smartsociety-db62f",
-    "storage_bucket": "smartsociety-db62f.appspot.com"
+    "storage_bucket": "smartsociety-db62f.firebasestorage.app"
   },
   "client": [
     {
@@ -12,7 +12,12 @@
           "package_name": "com.example.t_store"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "161934143519-vhbb6ekp1hkqaeqbjd7h6upld8j6p0k4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBRFGEr4cZIu_ZmCmVMPVCrBvpf1dcYSNE"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161934143519-vhbb6ekp1hkqaeqbjd7h6upld8j6p0k4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "161934143519-lpoq71402tcug952sogeba229v7upuvc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.smartsociety"
+              }
+            }
+          ]
         }
       }
     }
