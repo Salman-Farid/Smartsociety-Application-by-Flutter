@@ -24,7 +24,6 @@ import 'views/admin/admin_dashboard.dart';
 import 'views/user/user_dashboard.dart';
 import 'views/admin/committee_directory.dart';
 import 'views/user/resident_directory.dart';
-import 'config/firebase_config.dart';
 import 'controllers/auth_controller.dart';
 import 'controllers/loading_controller.dart';
 import 'utils/theme.dart';
@@ -32,15 +31,20 @@ import 'views/common/register.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await FirebaseConfig.init();
-  
+  // Initialize Firebase with the default options
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   Get.put(AuthController());
   Get.put(LoadingController());
-  
+
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -49,9 +53,9 @@ class MyApp extends StatelessWidget {
       initialRoute: '/login',
       getPages: [
         GetPage(
-          name: '/login', 
-          page: () => LoginScreen(),
-          transition: Transition.fadeIn
+            name: '/login',
+            page: () => LoginScreen(),
+            transition: Transition.fadeIn
         ),
         GetPage(name: '/register', page: () => RegisterScreen()),
         GetPage(name: '/user-dashboard', page: () => UserDashboard()),

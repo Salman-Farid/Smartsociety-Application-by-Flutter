@@ -21,6 +21,8 @@ class StaffDirectory extends StatelessWidget {
     // Add more staff members as needed
   ];
 
+  const StaffDirectory({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

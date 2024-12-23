@@ -11,6 +11,8 @@ class RegisterScreen extends StatelessWidget {
   final TextEditingController apartmentController = TextEditingController();
   final AuthController authController = Get.find();
 
+  RegisterScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

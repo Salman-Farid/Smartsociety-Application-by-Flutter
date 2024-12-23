@@ -6,7 +6,7 @@ import '../../models/committee_member.dart';
 class MemberTile extends StatelessWidget {
   final CommitteeMember member;
 
-  MemberTile(this.member);
+  const MemberTile(this.member, {super.key});
 
   @override
   Widget build(BuildContext context) {

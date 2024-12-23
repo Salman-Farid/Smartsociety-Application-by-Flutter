@@ -21,6 +21,8 @@ class ResidentDirectory extends StatelessWidget {
     // Add more residents as needed
   ];
 
+  const ResidentDirectory({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

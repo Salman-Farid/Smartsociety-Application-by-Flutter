@@ -9,6 +9,8 @@ class EmergencyContacts extends StatelessWidget {
     // Add more emergency contacts as needed
   ];
 
+  const EmergencyContacts({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

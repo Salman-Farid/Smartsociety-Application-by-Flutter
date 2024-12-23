@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class FeedbackSuggestions extends StatelessWidget {
+  const FeedbackSuggestions({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

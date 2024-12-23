@@ -6,7 +6,7 @@ import '../../models/resident.dart';
 class ResidentTile extends StatelessWidget {
   final Resident resident;
 
-  ResidentTile(this.resident);
+  const ResidentTile(this.resident, {super.key});
 
   @override
   Widget build(BuildContext context) {

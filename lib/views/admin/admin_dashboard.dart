@@ -5,6 +5,8 @@ import 'committee_directory.dart';
 
 
 class AdminDashboard extends StatelessWidget {
+  const AdminDashboard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

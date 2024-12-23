@@ -10,6 +10,8 @@ class LoginScreen extends StatelessWidget {
   final TextEditingController passwordController = TextEditingController();
   final AuthController authController = Get.find();
 
+  LoginScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,6 +52,7 @@ class LoginScreen extends StatelessWidget {
                   return null;
                 },
               ),
+              
               SizedBox(height: 24),
               CustomButton(
                 text: 'Login',
