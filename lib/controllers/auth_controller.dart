@@ -1,22 +1,42 @@
-import 'package:get/get.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:get/get.dart';
 
 class AuthController extends GetxController {
-  FirebaseAuth auth = FirebaseAuth.instance;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final Rx<User?> user = Rx<User?>(null);
 
-  // Login function
-  Future<void> login(String email, String password) async {
+  @override
+  void onInit() {
+    user.bindStream(_auth.authStateChanges());
+    super.onInit();
+  }
+
+  Future<void> signIn(String email, String password) async {
     try {
-      await auth.signInWithEmailAndPassword(email: email, password: password);
-      Get.offAllNamed('/admin-dashboard'); // Update this to check user role
+      await _auth.signInWithEmailAndPassword(
+        email: email,
+        password: password
+      );
+      Get.offAllNamed('/user-dashboard');
     } catch (e) {
       Get.snackbar('Error', e.toString());
     }
   }
 
-  // Logout function
-  Future<void> logout() async {
-    await auth.signOut();
+  Future<void> signUp(String email, String password) async {
+    try {
+      await _auth.createUserWithEmailAndPassword(
+        email: email,
+        password: password
+      );
+      Get.offAllNamed('/user-dashboard');
+    } catch (e) {
+      Get.snackbar('Error', e.toString());
+    }
+  }
+
+  Future<void> signOut() async {
+    await _auth.signOut();
     Get.offAllNamed('/login');
   }
 }

@@ -1,16 +1,46 @@
-# smartsociety
+# Smart Society - Community Management App 🏢
 
-A new Flutter project.
+A modern Flutter application designed to streamline community living and society management. This app provides a comprehensive solution for residential communities to manage various aspects of their daily operations.
 
-## Getting Started
+## Features 🌟
 
-This project is a starting point for a Flutter application.
+- **Authentication System** 🔐
+  - Email & Password Login
+  - User Registration
+  - Secure Firebase Authentication
 
-A few resources to get you started if this is your first Flutter project:
+- **Community Features** 🏘️
+  - Maintenance Requests
+  - Event Calendar
+  - Facility Booking
+  - Notice Board
+  - Emergency Contacts
+  - Staff Directory
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Additional Services** 💡
+  - Lost and Found
+  - Skill Sharing
+  - Mental Health Support
+  - House Rent Listings
+  - Community Services
+  - Feedback & Suggestions
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tech Stack 💻
+
+- Flutter 3.x
+- Firebase (Authentication, Firestore, Storage)
+- GetX State Management
+- Material Design
+
+## Getting Started 🚀
+
+### Prerequisites
+
+- Flutter SDK (3.4.3 or higher)
+- Dart SDK (3.0.0 or higher)
+- Firebase Project
+- Android Studio / VS Code
+
+### Installation
+
+1. Clone the repository

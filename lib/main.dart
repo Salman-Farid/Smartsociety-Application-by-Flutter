@@ -24,10 +24,19 @@ import 'views/admin/admin_dashboard.dart';
 import 'views/user/user_dashboard.dart';
 import 'views/admin/committee_directory.dart';
 import 'views/user/resident_directory.dart';
+import 'config/firebase_config.dart';
+import 'controllers/auth_controller.dart';
+import 'controllers/loading_controller.dart';
+import 'utils/theme.dart';
+import 'views/common/register.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform,);
+  await FirebaseConfig.init();
+  
+  Get.put(AuthController());
+  Get.put(LoadingController());
+  
   runApp(MyApp());
 }
 
@@ -36,31 +45,22 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/user-dashboard',
+      theme: AppTheme.lightTheme,
+      initialRoute: '/login',
       getPages: [
-        GetPage(name: '/login', page: () => LoginScreen()),
-        GetPage(name: '/admin-dashboard', page: () => AdminDashboard()),
+        GetPage(
+          name: '/login', 
+          page: () => LoginScreen(),
+          transition: Transition.fadeIn
+        ),
+        GetPage(name: '/register', page: () => RegisterScreen()),
         GetPage(name: '/user-dashboard', page: () => UserDashboard()),
-        GetPage(name: '/committee-directory', page: () => CommitteeDirectory()),
-        GetPage(name: '/resident-directory', page: () => ResidentDirectory()),
-        GetPage(name: '/login', page: () => LoginScreen()),
-        GetPage(name: '/staff-directory', page: () => StaffDirectory()),
-        GetPage(name: '/notice-board', page: () => NoticeBoard()),
-        GetPage(name: '/event-calendar', page: () => EventCalendar()),
-        GetPage(name: '/emergency-contacts', page: () => EmergencyContacts()),
-        GetPage(name: '/maintenance-requests', page: () => MaintenanceRequests()),
-        GetPage(name: '/bill-payments', page: () => BillPayments()),
-        GetPage(name: '/facility-booking', page: () => FacilityBooking()),
-        GetPage(name: '/recruitment', page: () => Recruitment()),
-        GetPage(name: '/lost-found', page: () => LostFound()),
-        GetPage(name: '/house-rent', page: () => HouseRent()),
-        GetPage(name: '/community-services', page: () => CommunityServices()),
-        GetPage(name: '/study-groups', page: () => StudyGroups()),
-        GetPage(name: '/skill-sharing', page: () => SkillSharing()),
-        //GetPage(name: '/blood-donation', page: () => BloodDonation()),
-        GetPage(name: '/travel-group', page: () => TravelGroup()),
-        GetPage(name: '/mental-health-support', page: () => MentalHealthSupport()),
-        GetPage(name: '/feedback-suggestions', page: () => FeedbackSuggestions()),
+        GetPage(name: '/maintenance', page: () => MaintenanceRequests()),
+        GetPage(name: '/events', page: () => EventCalendar()),
+        GetPage(name: '/facilities', page: () => FacilityBooking()),
+        GetPage(name: '/notices', page: () => NoticeBoard()),
+        GetPage(name: '/emergency', page: () => EmergencyContacts()),
+        GetPage(name: '/directory', page: () => StaffDirectory()),
       ],
     );
   }

@@ -48,17 +48,19 @@ dependencies:
 
 
   # State Management
-  get: ^4.6.5
+  get: ^4.6.6
   get_storage: ^2.1.1
-  firebase_core: ^3.2.0
-  firebase_auth: ^5.1.2
-  cloud_firestore: ^5.1.0
-  firebase_ui_auth: ^1.15.0
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.15.3
+  cloud_firestore: ^4.13.6
+  firebase_ui_auth: ^1.11.0
+  firebase_storage: ^11.5.6
+  shared_preferences: ^2.2.2
 
 
   # Product Specific
   readmore: ^3.0.0
-  carousel_slider: ^4.2.1
+  carousel_slider: ^5.0.0
   flutter_rating_bar: ^4.0.1
   capped_progress_indicator: ^0.0.2
 
@@ -73,7 +75,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^4.0.0
+  flutter_lints: ^5.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
