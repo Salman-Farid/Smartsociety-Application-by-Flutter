@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class EmergencyContacts extends StatelessWidget {
   final List<Map<String, String>> emergencyNumbers = [

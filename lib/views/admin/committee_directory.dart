@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:smartsociety/models/committee_member.dart';
 
 class CommitteeDirectory extends StatelessWidget {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class NoticeBoard extends StatelessWidget {
   const NoticeBoard({super.key});
